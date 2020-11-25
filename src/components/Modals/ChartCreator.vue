@@ -1,9 +1,7 @@
 <template>
   <v-dialog v-model="openDialog" :width="width" :fullscreen="fullscreen">
     <template v-slot:activator="{ on, attrs }">
-      <v-btn text dark v-bind="attrs" v-on="on">
-        {{ 'Создать карту' }}
-      </v-btn>
+      <v-btn text dark v-bind="attrs" v-on="on">Создать карту</v-btn>
     </template>
     <v-card>
       <v-form
@@ -36,9 +34,7 @@
         <v-card-actions>
           <v-spacer />
 
-          <v-btn color="error" text @click="openDialog = false">
-            {{ `Закрыть` }}
-          </v-btn>
+          <v-btn color="error" text @click="openDialog = false">Закрыть</v-btn>
 
           <v-btn
             text
@@ -47,7 +43,7 @@
             :loading="form.loading"
             :disabled="!form.isValid"
           >
-            {{ `Создать` }}
+            Создать
           </v-btn>
         </v-card-actions>
       </v-form>
